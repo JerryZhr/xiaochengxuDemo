@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/map/map",
+    "pages/index/index",
+    "pages/logs/logs"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "张瑞的测试小程序",
+    "navigationBarTextStyle":"black"
+  }
+}
