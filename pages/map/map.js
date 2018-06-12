@@ -15,16 +15,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getLocation({
-      type: 'wgs84',
-      success: (res) => {
-        this.setData({
-          latitude : res.latitude, // 经度
-          longitude : res.longitude // 纬度
-        })
-        
-      }
-    });
+    if (app.globalData.map) {
+      console.info(app.globalData.map.latitude)
+      this.setData({
+        latitude: app.globalData.map.latitude,
+        longitude: app.globalData.map.longitude
+      })
+    }else{
+      console.info("wx.getLocation")
+      wx.getLocation({
+        type: 'wgs84',
+        success: (res) => {
+          this.setData({
+            latitude: res.latitude, // 经度
+            longitude: res.longitude // 纬度
+          })
+        }
+      });
+    }
+    
   },
 
   /**

@@ -32,8 +32,17 @@ App({
         }
       }
     })
+
+    wx.getLocation({
+      type: 'wgs84',
+      success: (res) => {
+        this.globalData.map.latitude = res.latitude // 经度
+        this.globalData.map.longitude = res.longitude // 纬度
+      }
+    })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    map:{}
   }
 })
