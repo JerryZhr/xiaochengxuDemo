@@ -9,5 +9,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "张瑞的测试小程序",
     "navigationBarTextStyle":"black"
-  }
+  },
+  "debug":true
 }
